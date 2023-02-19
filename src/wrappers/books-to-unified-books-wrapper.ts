@@ -1,3 +1,8 @@
+/*
+* Вариант реализации враппера №2
+* Он мне нравится сильно меньше фабрики в силу своей "божественности".
+* */
+
 import { UnifiedBook } from '../interfaces/unified-book';
 import { ReadingStatus } from '../models/reading-status';
 

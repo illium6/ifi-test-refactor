@@ -8,6 +8,7 @@ import {
 } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { books } from './data/books-source-third';
+import { SourceName } from '../models/source-wrapper-factory';
 
 @Injectable()
 export class ThirdSourceInterceptor implements HttpInterceptor {
@@ -19,7 +20,7 @@ export class ThirdSourceInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     if (req.url === '/third-book-source') {
       const response = new HttpResponse({
-        body: books,
+        body: { type: SourceName.THIRD, books },
         status: 200,
       });
 
