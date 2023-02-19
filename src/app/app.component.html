@@ -8,8 +8,8 @@
       <div class="number">{{ i + 1 }}.</div>
       <div class="name">Название: {{ book.title }}</div>
       <div class="authors">Автор: {{ book.authors.join(", ") }}</div>
-      <div class="status">Статус:</div>
-      <div class="time">Время чтения:</div>
+      <div class="status">Статус: {{ book.status }}</div>
+      <div class="time">Время чтения: {{ book.readingTimeDays }} дней</div>
     </div>
   </div>
 </div>

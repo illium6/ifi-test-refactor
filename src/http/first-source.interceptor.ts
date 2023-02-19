@@ -7,10 +7,6 @@ import {
 } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, Observable, of } from 'rxjs';
-import {
-  BooksFactoryService,
-  SourceName,
-} from '../services/books-factory.service';
 import { books } from './data/books-source-first';
 
 @Injectable()
@@ -23,7 +19,7 @@ export class FirstSourceInterceptor implements HttpInterceptor {
   ): Observable<HttpEvent<any>> {
     if (req.url === '/first-book-source') {
       const response = new HttpResponse({
-        body: BooksFactoryService.create(SourceName.FIRST, books),
+        body: books,
         status: 200,
       });
 

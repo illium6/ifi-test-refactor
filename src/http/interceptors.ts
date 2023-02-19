@@ -15,9 +15,9 @@ export const INTERCEPTORS: Provider[] = [
     useClass: SecondSourceInterceptor,
     multi: true,
   },
-  // {
-  //   provide: HTTP_INTERCEPTORS,
-  //   useClass: ThirdSourceInterceptor,
-  //   multi: true,
-  // },
+  {
+    provide: HTTP_INTERCEPTORS,
+    useClass: ThirdSourceInterceptor,
+    multi: true,
+  },
 ];
